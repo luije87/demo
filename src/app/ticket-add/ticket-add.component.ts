@@ -20,14 +20,19 @@ export class TicketAddComponent implements OnInit {
   statuses : any;
   agents : User[];
   users : User[];
-  
+  category : any;
+  status : any;
+  priority : any;
+
   constructor(private categoryService: CategoryService, private priorityService: PriorityService, private userService: UserService, private statusService: StatusService) {
     this.item = new User;
     this.categories = categoryService.getCategories();
     this.priorities = priorityService.getPriorities();
+    this.priority = this.priorities.find(x => x.default == true);
     this.agents = userService.getAgents();
     this.users = userService.getAUsers();
     this.statuses = statusService.getStatuses();
+    this.status = this.statuses.find(x => x.default == true);
   }
 
 

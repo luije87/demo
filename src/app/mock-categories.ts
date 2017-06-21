@@ -1,12 +1,12 @@
 import { Category } from './category';
  
 export const CATEGORIES: Category[] = [
-  { id: 1, name: 'Online', default: false },
-  { id: 2, name: 'Data Backup', default: false },
-  { id: 3, name: 'Email', default: false },
-  { id: 4, name: 'Event Recording', default: true },
-  { id: 5, name: 'Printer', default: false },
-  { id: 6, name: 'Voicemail', default: false },
-  { id: 7, name: 'Media', default: false },
-  { id: 8, name: 'Laptop', default: false }
+  { id: 1, name: 'Online' },
+  { id: 2, name: 'Data Backup' },
+  { id: 3, name: 'Email' },
+  { id: 4, name: 'Event Recording' },
+  { id: 5, name: 'Printer' },
+  { id: 6, name: 'Voicemail' },
+  { id: 7, name: 'Media' },
+  { id: 8, name: 'Laptop' }
 ];

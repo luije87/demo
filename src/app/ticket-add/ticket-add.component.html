@@ -24,28 +24,30 @@
           <label for="exampleInputEmail1">Caller Full Name</label>
           <input type="email" class="form-control" id="InputName" placeholder="Full Name" [(ngModel)]="item.name" name="name">
         </div>
-        <div class="form-group">
-          <label style="display: block;">Status</label>
-          <select class="selectpicker" data-live-search="true" title="Select Category" [(ngModel)]="item.status" name="status" >
-                            <option *ngFor="let item of statuses" [ngValue]="item">{{item.name}}</option>                            
-                        </select>
-        </div>
+
         <div class="form-group">
           <label style="display: block;">Category</label>
-          <select class="selectpicker" data-live-search="true" title="Select Category" [(ngModel)]="item.category" name="category" >
-                            <option *ngFor="let item of categories" [ngValue]="item" [attr.selected]="true">{{item.name}}</option>                            
+          <select class="selectpicker" data-live-search="true" title="Select Category" [(ngModel)]="category" name="category">
+                            <option *ngFor="let item of categories" [ngValue]="item" [attr.selected]="item.default == true ? true : null">{{item.name}}</option>                            
                         </select>
         </div>
         <div class="form-group">
           <label style="display: block;">Assigned To</label>
-          <select class="selectpicker" data-live-search="true" title="Select User" data-dropup-auto="false" [(ngModel)]="item.agent" name="agent" >
+          <select class="selectpicker" data-live-search="true" title="Select User" data-dropup-auto="false" [(ngModel)]="item.agent"
+            name="agent">
                             <option *ngFor="let item of agents" [ngValue]="item">{{item.name}}</option>                                                                                
                         </select>
         </div>
         <div class="form-group">
+          <label style="display: block;">Status</label>
+          <select class="selectpicker" data-live-search="true" title="Select Category" [(ngModel)]="status" name="status">
+                            <option *ngFor="let item of statuses" [ngValue]="item" [attr.selected]="item.default == true ? true : null">{{item.name}}</option>                                                        
+                        </select>
+        </div>
+        <div class="form-group">
           <label style="display: block;">Priority</label>
-          <select class="selectpicker" data-live-search="true" title="Select Priority" [(ngModel)]="item.status" name="priority" >
-                            <option *ngFor="let item of priorities" [ngValue]="item">{{item.name}}</option>
+          <select class="selectpicker" data-live-search="true" title="Select Priority" [(ngModel)]="priority" name="priority">
+                            <option *ngFor="let item of priorities" [ngValue]="item" [attr.selected]="item.default == true ? true : null">{{item.name}}</option>                            
                         </select>
         </div>
         <div class="form-group">
