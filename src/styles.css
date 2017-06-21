@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;  
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color:#222222;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
